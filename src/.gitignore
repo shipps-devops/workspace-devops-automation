@@ -1,42 +1,59 @@
-# Java
+# --- Java & Class Files ---
 *.class
 *.log
 *.ctxt
 
-# Maven
+# --- Maven ---
 target/
-!.mvn/wrapper/maven-wrapper.jar
+dependency-reduced-pom.xml
+release.properties
+pom.xml.tag
+pom.xml.next
+pom.xml.releaseBackup
+pom.xml.versionsBackup
 .mvn/timing.properties
+# Keep this rule in case wrapper is used in the future
+!.mvn/wrapper/maven-wrapper.jar
 
-# IDEs
+# --- Archives & Binaries (IMPORTANT) ---
+# Prevent uploading heavy files by mistake
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# --- IDEs (IntelliJ, VS Code, Eclipse) ---
 *.iml
 .idea/
 .vscode/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs e Temp
-logs/
-*.tmp
-*.bak
-
-# Credenciais sensíveis
-*.pem
-*.key
-*.env
-
-# IntelliJ local configs
+.classpath
+.project
+.settings/
+.factorypath
 out/
 *.iws
 
-# Arquivos do Spring Boot devtools
-.spring-boot-devtools.properties
+# --- OS Specific (Mac/Windows/Linux) ---
+.DS_Store
+Thumbs.db
+.guano
 
-# Docker
-*.dockerfile
-docker-compose.override.yml
-
-# Arquivos do sistema
+# --- Logs & Temp ---
+logs/
+*.tmp
+*.bak
 *.swp
+
+# --- Credentials (High Security) ---
+*.pem
+*.key
+*.env
+*.p12
+
+# --- Docker ---
+# Ignore temporary dockerfiles, but keep the official one
+*.dockerfile
+!Dockerfile
+docker-compose.override.yml
